@@ -1,0 +1,38 @@
+{
+  "name": "zoopla-cli",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/cli/index.js",
+  "bin": {
+    "zoopla-cli": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "keywords": [
+    "zoopla",
+    "ci"
+  ],
+  "license": "MIT",
+  "author": "Andrea Sonny <andreasonny83@gmail.com> (https://github.com/andreasonny83)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreasonny83/zoopla-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andreasonny83/zoopla-cli/issues"
+  },
+  "homepage": "https://github.com/andreasonny83/zoopla-cli#readme",
+  "engines": {
+    "node": ">=6"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dotenv": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.1.5",
+    "jest": "^23.3.0",
+    "prettier": "^1.13.7"
+  }
+}

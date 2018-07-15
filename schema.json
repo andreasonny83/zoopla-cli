@@ -1,0 +1,78 @@
+{
+  "country_code": "gb",
+  "num_floors": "0",
+  "image_150_113_url": "https://lid.zoocdn.com/150/113/45626a4ee9f85e81bb4e22d0e3bd7b7e70b2fc77.jpg",
+  "listing_status": "sale",
+  "num_bedrooms": "2",
+  "location_is_approximate": 0,
+  "image_50_38_url": "https://lid.zoocdn.com/50/38/45626a4ee9f85e81bb4e22d0e3bd7b7e70b2fc77.jpg",
+  "latitude": 51.550606,
+  "furnished_state": null,
+  "agent_address": "41 Walm Lane, London",
+  "category": "Residential",
+  "property_type": "Flat",
+  "longitude": -0.233812,
+  "thumbnail_url": "https://lid.zoocdn.com/80/60/45626a4ee9f85e81bb4e22d0e3bd7b7e70b2fc77.jpg",
+  "description": "Newly refurbished to A high standard and offered with no chain is this immaculate 2 bed ground floor period conversion. Accommodation comprises of two double bedrooms, good sized kitchen / living room, separate bathroom, and courtyard garden. Benefits include gas central heating and double glazed windows. Viewing is essential & not to be missed!Living Room14' 9\" x 11' 3\" (4.49m x 3.42m)Kitchen8' 3\" x 9' 2\" (2.51m x 2.80m)Bedroom12' 2\" x 12' (3.70m x 3.67m)Bedroom10' 8\" x 11' 6\" (3.25m x 3.51m)Bathroom8' 10\" x 4' 5\" (2.68m x 1.35m)GardenFlooplan(EPC) eec next to EIR",
+  "post_town": "London",
+  "details_url": "https://www.zoopla.co.uk/for-sale/details/43804726?utm_source=v1:_bybCCTcDAfQ6RX8LqI-vyL5NxI5wuyO&utm_medium=api",
+  "short_description": "Newly refurbished to A high standard and offered with no chain is this immaculate 2 bed ground floor period conversion. Accommodation comprises of two double bedrooms, good sized kitchen / living room, separate bathroom, and courtyard garden. Benefits include gas central heating and double glazed...",
+  "outcode": "NW2",
+  "property_report_url": "https://www.zoopla.co.uk/area-report/?listing_id=43804726&z_cmp=property%20report&z_con=get%20a%20report&z_med=propinfo%20link&z_src=ios-for-sale",
+  "image_645_430_url": "https://lid.zoocdn.com/645/430/45626a4ee9f85e81bb4e22d0e3bd7b7e70b2fc77.jpg",
+  "county": "London",
+  "price": "450000",
+  "listing_id": "43804726",
+  "image_caption": "",
+  "image_80_60_url": "https://lid.zoocdn.com/80/60/45626a4ee9f85e81bb4e22d0e3bd7b7e70b2fc77.jpg",
+  "status": "for_sale",
+  "agent_name": "Parkinsonfarr",
+  "num_recepts": "0",
+  "country": "England",
+  "first_published_date": "2017-05-11 17:32:40",
+  "displayable_address": "Chapter Road, London NW2",
+  "street_name": "Chapter Road Willesden Green",
+  "num_bathrooms": "0",
+  "agent_logo": "https://st.zoocdn.com/zoopla_static_agent_logo_(129061).png",
+  "price_change": [
+    {
+      "direction": "",
+      "date": "2017-05-11 16:26:22",
+      "percent": "0%",
+      "price": "550000"
+    },
+    {
+      "direction": "down",
+      "date": "2017-05-24 16:25:46",
+      "percent": "-4.5%",
+      "price": "525000"
+    },
+    {
+      "direction": "down",
+      "date": "2017-06-29 16:25:54",
+      "percent": "-4.7%",
+      "price": "499950"
+    },
+    {
+      "direction": "down",
+      "date": "2017-09-14 16:26:01",
+      "percent": "-4.9%",
+      "price": "475000"
+    },
+    {
+      "direction": "down",
+      "date": "2017-11-23 17:25:58",
+      "percent": "-5.2%",
+      "price": "450000"
+    }
+  ],
+  "agent_phone": "020 3641 4305",
+  "image_354_255_url": "https://lid.zoocdn.com/354/255/45626a4ee9f85e81bb4e22d0e3bd7b7e70b2fc77.jpg",
+  "image_url": "https://lid.zoocdn.com/354/255/45626a4ee9f85e81bb4e22d0e3bd7b7e70b2fc77.jpg",
+  "last_published_date": "2018-05-03 16:25:16",
+  "price_change_summary": {
+    "direction": "down",
+    "percent": "-18.1%",
+    "last_updated_date": "2017-11-23 17:25:58"
+  }
+}
