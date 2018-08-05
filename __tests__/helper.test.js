@@ -1,69 +1,85 @@
-const path = require('path');
 const fs = require('fs');
-require('dotenv').config({path: path.resolve(process.cwd(), '.test.env')});
-const { Helper, log } = require('../lib/helper');
+const { Helper, log, error } = require('../lib/helper');
 
 jest.mock('fs');
 
 describe('Helper', () => {
-  beforeEach(() => {
-    jest.resetAllMocks();
-    fs.readFile = jest.fn();
+  describe('fetchReport', () => {
+    beforeEach(() => {
+      jest.resetAllMocks();
+      fs.readFile = jest.fn();
+    });
+
+    it('fetchReport should return the stored json report', async () => {
+      // Arrange
+      const expected = { data: 'mock' };
+
+      fs.readFile.mockImplementation((fileName, format, cb) =>
+        cb(null, JSON.stringify(expected))
+      );
+
+      // Act
+      const response = await Helper.fetchReport('123');
+
+      // Assert
+      expect(response).toEqual(expected);
+    });
   });
 
-  it('fetchReport should return the stored json report', async () => {
-    // Arrange
-    const expected = {data: 'mock'};
+  describe('log', () => {
+    const env = process.env.NODE_ENV;
 
-    fs.readFile.mockImplementation((fileName, format, cb) =>
-      cb(null, JSON.stringify(expected)));
+    beforeEach(() => jest.resetAllMocks());
+    afterEach(() => (process.env.NODE_ENV = env));
 
-    // Act
-    const response = await Helper.fetchReport('123');
+    it('should force a message to be print', () => {
+      // Arrange
+      jest.spyOn(console, 'log').mockImplementation(() => {});
+      let currentTime;
 
-    // Assert
-    expect(response).toEqual(expected);
-  });
-});
+      // Act
+      currentTime = new Date().toLocaleTimeString();
+      log('test', true);
 
-describe('log', () => {
-  const env = process.env.NODE_ENV;
+      // Assert
+      expect(console.log).toHaveBeenCalledWith(`[${currentTime}]: test`);
+    });
 
-  beforeEach(() => jest.resetAllMocks());
-  afterEach(() => process.env.NODE_ENV = env);
+    it(`should print the message if the environment is equal to 'development'`, () => {
+      // Arrange
+      process.env.NODE_ENV = 'development';
 
-  it('should force a message to be print', () => {
-    // Arrange
-    jest.spyOn(console, 'log').mockImplementation(() => {});
-    let currentTime;
+      // Act
+      log('test');
 
-    // Act
-    currentTime = new Date().toLocaleTimeString();
-    log('test', true);
+      // Assert
+      expect(console.log).toHaveBeenCalled();
+    });
 
-    // Assert
-    expect(console.log).toHaveBeenCalledWith(`[${currentTime}]: test`);
-  });
+    it(`should not print the message if the environment is different from 'development'`, () => {
+      // Arrange
+      jest.spyOn(console, 'log').mockImplementation(() => {});
 
-  it(`should print the message if the environment is equal to 'development'`, () => {
-    // Arrange
-    process.env.NODE_ENV = 'development';
+      // Act
+      log('test');
 
-    // Act
-    log('test');
-
-    // Assert
-    expect(console.log).toHaveBeenCalled();
+      // Assert
+      expect(console.log).not.toHaveBeenCalled();
+    });
   });
 
-  it(`should not print the message if the environment is different from 'development'`, () => {
-    // Arrange
-    jest.spyOn(console, 'log').mockImplementation(() => {});
+  describe('Error', () => {
+    it(`should print an error message`, () => {
+      // Arrange
+      const currentTime = new Date().toLocaleTimeString();
+      const expectedMessage = `[${currentTime}]: test`;
+      jest.spyOn(console, 'error').mockImplementation(() => {});
 
-    // Act
-    log('test');
+      // Act
+      error('test', true);
 
-    // Assert
-    expect(console.log).not.toHaveBeenCalled();
+      // Assert
+      expect(console.error).toHaveBeenCalledWith(expectedMessage);
+    });
   });
 });
